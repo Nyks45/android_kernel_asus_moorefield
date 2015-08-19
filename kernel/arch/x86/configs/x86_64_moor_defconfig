@@ -874,7 +874,13 @@ CONFIG_IP6_NF_RAW=y
 CONFIG_L2TP=y
 # CONFIG_L2TP_DEBUGFS is not set
 # CONFIG_L2TP_V3 is not set
+<<<<<<< HEAD
 # CONFIG_BRIDGE is not set
+=======
+CONFIG_BRIDGE=n
+# CONFIG_BRIDGE_IGMP_SNOOPING=y
+CONFIG_BRIDGE_NETFILTER=y
+>>>>>>> c146446... updated to 2.20.40 code base
 CONFIG_HAVE_NET_DSA=y
 # CONFIG_VLAN_8021Q is not set
 # CONFIG_DECNET is not set
