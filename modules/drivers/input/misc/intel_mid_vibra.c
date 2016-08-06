@@ -147,10 +147,6 @@ static int vibra_soc_pwm_configure(struct vibra_info *info, bool enable)
 
 #define VIBRAGPO_REG 0x33
 #define VIBRAPWM_REG 0x32
-<<<<<<< HEAD
-=======
-#define VIBRAPWM_CTRL 0x36
->>>>>>> 07f8b8e... Re-Patch to 2.20.40 code base
 
 static int vibra_pmic_pwm_configure(struct vibra_info *info, bool enable)
 {
@@ -162,26 +158,14 @@ static int vibra_pmic_pwm_configure(struct vibra_info *info, bool enable)
 			ret = intel_scu_ipc_iowrite8(VIBRAPWM_REG, 0x41);
 			pr_debug("%s: enable PWM block when incall\n", __func__);
 			if (ret)
-<<<<<<< HEAD
 				printk("[VIB] write vibra_drv3102_enable duty value faild\n");
 		} else {
-=======
-			printk("[VIB] write vibra_drv3102_enable duty value faild\n");
-			} 
-		else {
->>>>>>> 07f8b8e... Re-Patch to 2.20.40 code base
 			ret = intel_scu_ipc_iowrite8(VIBRAGPO_REG, 0x16);
 			pr_debug("%s: enable GPO block\n", __func__);
 			if (ret)
 				printk("[VIB] write vibra_drv3102_enable duty value faild\n");
 		}
-<<<<<<< HEAD
 	} else {
-=======
-	} 
-	else 
-	{
->>>>>>> 07f8b8e... Re-Patch to 2.20.40 code base
 		pr_debug("%s: disable GPO/PWM block\n", __func__);
 		ret = intel_scu_ipc_iowrite8(VIBRAGPO_REG,0x04);
 		if (ret)
@@ -556,11 +540,7 @@ static int intel_mid_vibra_probe(struct pci_dev *pci,
 
 	if (info->ext_drv)
 		vibra_drv2605_calibrate(info);
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 07f8b8e... Re-Patch to 2.20.40 code base
 	ret = intel_scu_ipc_iowrite8(VIBRAPWM_CTRL, 0x78);
 	if (ret)
 		pr_err("write vibra_drv3102_enable duty value faild\n");

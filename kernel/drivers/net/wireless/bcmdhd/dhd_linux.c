@@ -143,7 +143,7 @@ static bool tput_latest_performance_mode = false;
 
 inline static void tput_set_performance_mode(bool en)
 {
-	//unsigned long boost_mode;
+	unsigned long boost_mode;
 
 	//do nothing when tput_check_interval_s=0(disable tput monitor)
 	if(!tput_check_interval_s)
